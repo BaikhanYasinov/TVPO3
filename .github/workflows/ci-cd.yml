@@ -23,7 +23,7 @@ jobs:
 
       - name: Запуск тестов
         run: |
-          pytest test_calculator.py -v
+          python -m pytest tests/ -v --tb=short
   deploy:
      name: Deploy
      needs: test
@@ -32,5 +32,5 @@ jobs:
      steps:
        - name: Deploy to production server
          run: |
-           cd ${{ secrets.DEPLOY_PATH }}
+           cd /home/vboxuser/Desktop/TVPO/TVPO3
            git pull origin main
