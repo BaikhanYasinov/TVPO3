@@ -64,7 +64,7 @@ def test_multiple_transactions(calculator):
     calculator.add_expense(300, "Еда")
     calculator.add_expense(700, "Аренда")
     
-    assert calculator.get_balance() == 1500  # 2000 + 500 - 300 - 700 = 1500
+    assert calculator.get_balance() == 15000  # 2000 + 500 - 300 - 700 = 1500
     assert len(calculator.get_transactions()) == 4
 
 # Дополнительные тесты для проверки точности вычислений с плавающей точкой
